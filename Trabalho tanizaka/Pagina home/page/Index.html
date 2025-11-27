@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TELGUARD - Portal de Segurança Digital</title>
+    
+    <link rel="stylesheet" href="../style/style.css"> 
+    <link rel="stylesheet" href="../../comum.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container header-grid">
+            <div class="logotipo">
+                <a href="/Pagina home/page/Index.html">
+                    <span class="logo-texto">TELGUARD</span>
+                    <span class="sub-texto">ANATEL - Portal de Segurança Digital</span>
+                </a>
+            </div>
+            
+            <nav class="menu-navegacao">
+                <ul>
+                    <li><a href="Index.html" class="active">Início</a></li>
+                    <li><a href="../../Pagina de noticias/page/noticias.html">Notícias</a></li>
+                    <li><a href="../../pagina sobre/page/index.html">Sobre</a></li>
+                    <li><a href="../../Canal do usuario/page/index.html">Canal do Usuário</a></li>
+                    <li><a href="../../pagina ods/page/ods.html">ODS</a></li>
+                    <li><a href="../../pagina contato/page/index.html">Contato</a></li>
+                </ul>
+            </nav>
+
+            <button class="menu-mobile-btn" aria-label="Abrir Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner-principal">
+            <div class="container banner-conteudo">
+                <h1>Sua Segurança no Digital é Nossa Prioridade.</h1>
+                <p>Mantenha-se informado e proteja-se contra fraudes e ataques online.</p>
+                <a href="/Pagina de noticias/page/noticias.html" class="btn-alerta"> 
+                    <i class="fas fa-exclamation-triangle"></i> Veja os Alertas Mais Recentes
+                </a>
+            </div>
+        </section>
+
+        <section class="introducao">
+            <div class="container">
+                <h2>Bem-vindo ao Portal de Segurança Digital da TelGuard</h2>
+                <p>Este portal é a sua fonte oficial de informações sobre segurança e telecomunicações no Brasil. Nossa missão é promover um ambiente digital seguro para todos os usuários.</p>
+            </div>
+        </section>
+        
+        <section class="video-destaque">
+            <div class="container video-conteudo">
+                <div class="video-box">
+                    <iframe 
+                        width="100%" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/NT6ZQPlfsYE" 
+                        title="Vídeo de Segurança Digital" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-texto">
+                    <h3>Assista e Aprenda: A Importância da Proteção de Dados</h3>
+                    <p>O Brasil é o segundo maior alvo de ataques cibernéticos na América Latina, enfrentando desafios constantes. Entenda como a atuação da TelGuard/Anatel protege as redes e garanta mais segurança no seu dia a dia.</p>
+                    <a href="/Canal do usuario/page/index.html" class="btn-cta">
+                        <i class="fas fa-headset"></i> Tire suas Dúvidas
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="destaques">
+            <div class="container">
+                <h2 class="titulo-secao-central">Atalhos Essenciais de Segurança</h2>
+                <div class="destaques-grid">
+                    
+                    <a href="/Pagina de noticias/page/noticias.html" class="card-destaque">
+                        <i class="fas fa-newspaper"></i>
+                        <h3>Notícias e Alertas de Segurança</h3>
+                        <p>Fique por dentro das últimas ameaças e comunicados oficiais.</p>
+                        <div class="card-info-extra">
+                            Novos comunicados sobre golpes e vulnerabilidades nas redes.
+                        </div>
+                    </a>
+                    
+                    <a href="#guia-praticas" class="card-destaque">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Guia de Boas Práticas</h3>
+                        <p>Aprenda a proteger seus dados, dispositivos e conexões.</p>
+                        <div class="card-info-extra">
+                            Dicas práticas para configurar senhas, VPNs e autenticação em 2 fatores.
+                        </div>
+                    </a>
+                    
+                    <a href="/Canal do usuario/page/index.html" class="card-destaque">
+                        <i class="fas fa-bullhorn"></i>
+                        <h3>Canal de Denúncias e Contato</h3>
+                        <p>Reporte incidentes e tire suas dúvidas sobre telecomunicações e segurança.</p>
+                        <div class="card-info-extra">
+                            Use nossos canais de contato (telefone, e-mail, formulário) para denúncias.
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="guia-praticas" id="guia-praticas">
+            <div class="container">
+                <h2 class="titulo-secao-central">Guia Rápido de Boas Práticas Digitais</h2>
+                <div class="guia-praticas-grid">
+                    <div class="pratica-item">
+                        <div class="icone-pratica"><i class="fas fa-key"></i></div>
+                        <h3>Gerenciamento de Senhas</h3>
+                        <p>Nunca utilize a mesma senha para diferentes serviços. Use um gerenciador e altere-as a cada 90 dias.</p>
+                    </div>
+                    <div class="pratica-item">
+                        <div class="icone-pratica"><i class="fas fa-user-lock"></i></div>
+                        <h3>Autenticação de 2 Fatores (2FA)</h3>
+                        <p>Ative o 2FA em todos os aplicativos que suportam a funcionalidade para adicionar uma camada extra de segurança.</p>
+                    </div>
+                    <div class="pratica-item">
+                        <div class="icone-pratica"><i class="fas fa-cloud-upload-alt"></i></div>
+                        <h3>Backup Regular</h3>
+                        <p>Mantenha cópias de segurança dos seus arquivos importantes em nuvem ou em um disco externo seguro.</p>
+                    </div>
+                    <div class="pratica-item">
+                        <div class="icone-pratica"><i class="fas fa-link"></i></div>
+                        <h3>Verificação de Links</h3>
+                        <p>Desconfie de links recebidos por e-mail ou WhatsApp que prometem benefícios inesperados ou urgência.</p>
+                    </div>
+                    <div class="pratica-item">
+                        <div class="icone-pratica"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Bloqueio Imediato</h3>
+                        <p>Em caso de roubo ou perda do celular, bloqueie imediatamente o IMEI junto à sua operadora e registre um B.O.</p>
+                    </div>
+                    <div class="pratica-item">
+                        <div class="icone-pratica"><i class="fas fa-wifi"></i></div>
+                        <h3>Redes Públicas</h3>
+                        <p>Evite realizar transações financeiras em redes Wi-Fi públicas. Utilize uma VPN para criptografar sua conexão.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="estatisticas">
+            <div class="container">
+                <h2 class="titulo-secao-central">Cibersegurança em Números</h2>
+                <div class="estatisticas-grid" id="estatisticas-grid">
+                    <div class="estatistica-item">
+                        <i class="fas fa-globe"></i>
+                        <p class="numero" id="alvo1" data-alvo="2">0</p>
+                        [cite_start]<p class="descricao">º Maior alvo de ataques cibernéticos na América Latina[cite: 527, 528].</p>
+                    </div>
+                    <div class="estatistica-item">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p class="numero" id="alvo2" data-alvo="1379">0</p>
+                        [cite_start]<p class="descricao">Golpes por minuto registrados no país[cite: 518, 526].</p>
+                    </div>
+                    <div class="estatistica-item">
+                        <i class="fas fa-lock-open"></i>
+                        <p class="numero">Críticas</p>
+                        [cite_start]<p class="descricao">Vulnerabilidades na segurança de dados devido à alta digitalização no Brasil[cite: 92].</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta-secundaria">
+            <div class="container cta-conteudo">
+                <i class="fas fa-hand-point-right"></i>
+                <div>
+                    <h3>Não Seja a Próxima Vítima!</h3>
+                    <p>Aprenda as Boas Práticas essenciais para manter seus dados, dispositivos e conexões seguros no ambiente digital.</p>
+                </div>
+                <a href="#guia-praticas" class="btn-cta">
+                    Acessar Guia de Proteção
+                </a>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="rodape">
+        <div class="container footer-grid">
+            
+            <div class="coluna-institucional">
+                <h4>Informações Institucionais</h4>
+                <p>TELGUARD - ANATEL.</p>
+                <p>&copy; 2025 Todos os direitos reservados a TELGUARD.</p>
+            </div>
+            
+            <div class="coluna-links-uteis">
+                <h4>Rodapé | Links Úteis</h4>
+                <ul>
+                    <li><a href="#">LGPD (Lei Geral de Proteção de Dados)</a></li>
+                    <li><a href="#">Regulamentos da ANATEL</a></li>
+                    <li><a href="/pagina ods/page/ods.html">ODS Relacionados</a></li>
+                    <li><a href="#">Mapa do Site</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script/script.js"></script> 
+</body>
+</html>

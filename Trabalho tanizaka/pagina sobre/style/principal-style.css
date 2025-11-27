@@ -1,0 +1,80 @@
+/* ======================================= */
+/* ESTILOS ESPECÍFICOS: SOBRE NÓS */
+/* ======================================= */
+
+/* Seção Hero (Banner) */
+.hero {
+    color: var(--cor-texto);
+    /* Ajustei o padding vertical para centralizar melhor o conteúdo na vertical */
+    padding: 60px 20px; 
+    text-align: center;
+    /* Reduzi a margem inferior para aproximar os cards do hero */
+    margin-bottom: 20px; 
+    background-color: var(--cor-fundo); 
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--cor-anatel);
+}
+
+.hero p {
+    /* 🌟 CORREÇÃO: Aumentei o tamanho da fonte para 1.3rem 🌟 */
+    font-size: 1.3rem; 
+    opacity: 0.9;
+    color: var(--cor-texto); 
+    font-weight: 600; /* Deixei um pouco mais forte para destaque */
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    /* Reduzi o padding superior/inferior para aproximar mais o hero e o footer */
+    padding: 20px 40px 60px 40px; 
+    justify-content: center;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.card-link:hover .card {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.icon {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.4em;
+    color: var(--cor-anatel); 
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: var(--cor-texto); 
+    line-height: 1.5;
+}

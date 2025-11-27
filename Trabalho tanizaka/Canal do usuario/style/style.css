@@ -1,0 +1,201 @@
+/* ======================================= */
+/* ESTILOS ESPECÍFICOS: CANAL DO USUÁRIO */
+/* ======================================= */
+
+.canal-usuario-main {
+    background-color: var(--cor-fundo);
+}
+
+.titulo-pagina {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--cor-anatel);
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: inline-block;
+    border-bottom: 3px solid var(--cor-secundaria);
+}
+
+.duvidas-section {
+    text-align: center;
+    padding: 20px 0 60px 0;
+}
+
+.duvidas-section h2 {
+    font-size: 1.8rem;
+    color: var(--cor-anatel);
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+/* LAYOUT DAS 3 OPÇÕES DE CONTATO (TELEFONE, EMAIL, WHATSAPP) */
+.opcoes-contato {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.contato-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--cor-texto-claro);
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none; /* Garante que os âncoras (WhatsApp) se pareçam com divs */
+    color: inherit;
+}
+
+.contato-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icone-box {
+    background-color: var(--cor-anatel);
+    color: var(--cor-texto-claro);
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.contato-card:hover .icone-box {
+    background-color: var(--cor-secundaria);
+}
+
+.contato-label {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--cor-anatel);
+    margin-bottom: 5px;
+}
+
+.texto-acao {
+    color: var(--cor-texto);
+    font-size: 0.95rem;
+    height: 18px; 
+    transition: opacity 0.3s;
+}
+
+.contato-card:hover .texto-acao {
+    opacity: 0;
+}
+
+
+/* Informação que aparece no hover (número/email) */
+.info-hover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-claro);
+    padding: 10px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    transform: translateY(100%); 
+    transition: transform 0.3s ease-out;
+}
+
+.contato-card:hover .info-hover {
+    transform: translateY(0);
+}
+
+/* Divisores verticais */
+.divisor-vertical {
+    width: 1px;
+    height: 140px;
+    background-color: #ccc;
+    margin: 0 10px;
+    align-self: center;
+}
+
+
+/* 🌟 NOVO: ESTILOS PARA O BOTÃO CTA 🌟 */
+.cta-formulario-container {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    background-color: var(--cor-texto-claro);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--sombra-card);
+}
+
+.cta-formulario-container h3 {
+    text-align: center;
+    color: var(--cor-anatel);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.btn-formulario {
+    background-color: var(--cor-anatel);
+    color: var(--cor-texto-claro);
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-formulario i {
+    margin-right: 15px;
+    font-size: 1.3rem;
+}
+
+.btn-formulario:hover {
+    background-color: var(--cor-secundaria);
+    transform: translateY(-2px);
+}
+
+
+/* RESPONSIVIDADE ESPECÍFICA */
+@media (max-width: 768px) {
+    .opcoes-contato {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .divisor-vertical {
+        display: none;
+    }
+    
+    .contato-card {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .cta-formulario-container {
+        padding: 20px;
+        margin-top: 20px;
+    }
+    
+    .btn-formulario {
+        font-size: 1rem;
+    }
+}

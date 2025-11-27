@@ -1,0 +1,191 @@
+/* ======================================= */
+/* ESTILOS PÁGINA DE NOTÍCIAS (CONTEÚDO PRINCIPAL) */
+/* ======================================= */
+
+.noticias-main .titulo-pagina {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: block;
+    border-bottom: 3px solid var(--cor-secundaria);
+    padding-bottom: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.noticias-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+/* LISTA DE NOTÍCIAS (Cards) */
+.lista-noticias .noticia-card {
+    background-color: var(--cor-texto-claro);
+    box-shadow: var(--sombra-card);
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    overflow: hidden; 
+    
+    /* 🌟 ESTADO INICIAL PARA ANIMAÇÃO JS 🌟 */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* 🌟 ESTADO FINAL (ADICIONADO PELO JS) 🌟 */
+.lista-noticias .noticia-card.aparecer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.noticia-imagem {
+    flex-shrink: 0;
+    width: 250px;
+    height: auto;
+    background-color: var(--cor-fundo);
+    border-right: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para o placeholder vazio */
+.noticia-card.placeholder-vazio .noticia-imagem {
+    background-color: #e9ecef; 
+    color: #adb5bd; 
+    font-size: 2.5rem;
+}
+.noticia-card.placeholder-vazio h3 {
+    color: #6c757d; 
+}
+
+
+.noticia-conteudo {
+    padding: 20px;
+}
+
+.noticia-conteudo h3 {
+    color: var(--cor-anatel);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.noticia-meta {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.noticia-meta i {
+    margin-right: 5px;
+    color: var(--cor-secundaria);
+}
+
+.btn-leia-mais {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: var(--cor-secundaria);
+}
+
+/* SIDEBAR (Barra Lateral) */
+.sidebar-widget {
+    background-color: var(--cor-texto-claro);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--sombra-card);
+    margin-bottom: 30px;
+}
+
+.sidebar-widget h3 {
+    color: var(--cor-anatel);
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-widget h3 i {
+    margin-right: 8px;
+    color: var(--cor-secundaria);
+}
+
+.sidebar-widget ul {
+    list-style: none;
+}
+
+.sidebar-widget li {
+    padding: 5px 0;
+}
+
+.sidebar-widget a {
+    color: var(--cor-texto);
+    font-size: 0.95rem;
+}
+
+.alerta-widget {
+    background-color: #ffe5e5;
+    border-left: 5px solid #dc3545;
+}
+
+.btn-alerta-sidebar {
+    background-color: #dc3545;
+    color: var(--cor-texto-claro);
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 600;
+    display: block;
+}
+
+/* PAGINAÇÃO */
+.paginacao {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.paginacao .btn-pagina {
+    background-color: var(--cor-texto-claro);
+    color: var(--cor-anatel);
+    padding: 8px 15px;
+    border: 1px solid var(--cor-anatel);
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.paginacao .btn-pagina:hover {
+    background-color: var(--cor-anatel);
+    color: var(--cor-texto-claro);
+}
+
+/* RESPONSIVIDADE PÁGINA DE NOTÍCIAS */
+@media (max-width: 992px) {
+    .noticias-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        order: 1; 
+    }
+
+    .lista-noticias {
+        order: 2;
+    }
+
+    .noticia-card {
+        flex-direction: column;
+    }
+
+    .noticia-imagem {
+        width: 100%;
+        height: 150px; 
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+}

@@ -1,0 +1,121 @@
+/* Importante: Remova a seção de RESET do seu CSS local, pois ela está no comum.css */
+
+body {
+    /* Usando fonte do comum.css */
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--cor-fundo); /* #f4f7fa */
+    color: var(--cor-texto); /* #333 */
+}
+
+/* Removido o estilo do header/footer, pois estão no comum.css */
+
+/* Seção de contato */
+main {
+    padding: 40px 20px;
+    min-height: 80vh; /* Para garantir que o footer não suba muito */
+}
+
+.contact-section {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--cor-texto-claro); /* white */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--sombra-card); /* 0 8px 20px rgba(0,0,0,0.1) */
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2em;
+    color: var(--cor-anatel); /* #0078D7 */
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 1em;
+    color: var(--cor-texto); /* #555 */
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.contact-form label {
+    font-weight: 600;
+    color: var(--cor-texto);
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    /* Usando fonte do comum.css */
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--cor-secundaria); /* #007bff */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: var(--cor-anatel); /* #0078D7 */
+    color: var(--cor-texto-claro); /* white */
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form button i {
+    margin-right: 10px;
+}
+
+.contact-form button:hover {
+    background-color: var(--cor-secundaria); /* #005fa3 */
+    transform: translateY(-2px);
+}
+
+/* Alerta de Sucesso */
+.success-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d4edda; /* Verde Claro */
+    color: #155724; /* Verde Escuro */
+    padding: 30px 50px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1em;
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    /* Removida a animação CSS para não conflitar com o JS, mas mantemos o estilo base */
+}
+
+/* Responsividade básica para o formulário */
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 20px;
+        margin: 0 10px;
+    }
+}

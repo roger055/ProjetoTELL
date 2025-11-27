@@ -1,0 +1,106 @@
+/* ======================================= */
+/* ESTILOS ESPECÍFICOS: VISÃO */
+/* ======================================= */
+
+/* Hero Section (Aproveita os estilos ajustados da página Sobre Nós) */
+.hero {
+    color: var(--cor-texto);
+    padding: 60px 20px; 
+    text-align: center;
+    margin-bottom: 20px; 
+    background-color: var(--cor-fundo); 
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--cor-anatel);
+}
+
+.hero p {
+    font-size: 1.3rem; 
+    opacity: 0.9;
+    color: var(--cor-texto); 
+    font-weight: 600;
+}
+
+/* Seção de Conteúdo */
+.content {
+    padding: 40px 20px;
+    /* Usando cores do tema */
+    background: linear-gradient(to right, var(--cor-fundo), #e6ecf3); 
+    min-height: calc(100vh - 400px); 
+}
+
+.content-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--cor-texto-claro); /* Usando var(--cor-texto-claro) para branco */
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.content-header {
+    text-align: center;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-icon {
+    font-size: 3.5em; 
+    /* Usando a cor de destaque do site */
+    color: var(--cor-secundaria); 
+    margin-bottom: 20px;
+}
+
+.content-header h2 {
+    font-size: 2.2em;
+    /* Usando a cor institucional */
+    color: var(--cor-anatel); 
+    margin-bottom: 10px;
+}
+
+.content-text {
+    line-height: 1.8;
+    /* Usando a cor de texto padrão */
+    color: var(--cor-texto);
+}
+
+.content-text p {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 1.05em;
+}
+
+.content-text h3 {
+    font-size: 1.4em;
+    /* Usando a cor institucional para os títulos */
+    color: var(--cor-anatel); 
+    margin-top: 30px;
+    margin-bottom: 15px;
+    /* Usando a cor institucional para o border-left */
+    border-left: 4px solid var(--cor-anatel); 
+    padding-left: 15px;
+}
+
+.btn-voltar {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    /* Usando a cor institucional para o botão */
+    background-color: var(--cor-anatel); 
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-voltar:hover {
+    /* Usando a cor secundária (azul claro) no hover para destaque */
+    background-color: var(--cor-secundaria); 
+    transform: translateX(-5px);
+}   

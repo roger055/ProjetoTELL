@@ -1,0 +1,183 @@
+/* GERAIS E RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🌟 NOVO: Rolagem suave para âncoras (como o Guia de Práticas) 🌟 */
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    /* Cores tipicas de portais governamentais/institucionais (Azul forte e tons de cinza) */
+    --cor-anatel: #004b8d; /* Azul Escuro Institucional */
+    --cor-secundaria: #007bff; /* Azul Claro/Destaque */
+    --cor-fundo: #f0f2f5; /* Cinza Claro Suave */
+    --cor-texto: #333;
+    --cor-texto-claro: #fff;
+    --sombra-card: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-anatel);
+    transition: color 0.3s;
+}
+
+/* HEADER - CABEÇALHO */
+.cabecalho {
+    background-color: var(--cor-texto-claro);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+    padding: 15px 0;
+}
+
+.header-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logotipo a {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.logo-texto {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--cor-anatel);
+}
+
+.sub-texto {
+    font-size: 0.8rem;
+    color: var(--cor-secundaria);
+    font-weight: 600;
+}
+
+.menu-navegacao ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu-navegacao a {
+    color: var(--cor-texto);
+    font-weight: 600;
+    padding: 5px 0;
+    position: relative;
+}
+
+.menu-navegacao a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--cor-secundaria);
+    transition: width 0.3s ease-in-out;
+}
+
+.menu-navegacao a:hover::after {
+    width: 100%;
+}
+
+.menu-mobile-btn {
+    display: none; /* Esconde no desktop */
+}
+
+/* FOOTER - RODAPÉ */
+.rodape {
+    background-color: var(--cor-anatel);
+    color: var(--cor-texto-claro);
+    padding: 40px 0;
+}
+
+.footer-grid {
+    display: grid;
+    /* 2 colunas: Institucional e Links Úteis */
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.rodape h4 {
+    color: var(--cor-secundaria);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 5px;
+}
+
+.rodape p {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.rodape ul {
+    list-style: none;
+}
+
+.rodape li {
+    margin-bottom: 5px;
+}
+
+.rodape a {
+    /* 🌟 CORRIGIDO: Opacidade para o texto claro no rodapé 🌟 */
+    color: var(--cor-texto-claro);
+    font-size: 0.9rem;
+    opacity: 0.7; /* Texto mais suave */
+}
+
+.rodape a:hover {
+    /* 🌟 CORRIGIDO: Mudar cor para secundária no hover para destaque 🌟 */
+    color: var(--cor-secundaria);
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* RESPONSIVIDADE GERAL */
+@media (max-width: 992px) {
+    .menu-navegacao {
+        display: none; 
+    }
+    
+    .menu-mobile-btn {
+        display: block; 
+        background: none;
+        border: none;
+        color: var(--cor-anatel);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    .footer-grid {
+        /* Muda para 1 coluna no mobile */
+        grid-template-columns: 1fr; 
+        text-align: center;
+    }
+
+    .coluna-institucional, .coluna-links-uteis {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .coluna-links-uteis h4 {
+        margin-top: 15px;
+    }
+}

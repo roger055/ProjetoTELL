@@ -1,0 +1,367 @@
+/* ======================================= */
+/* ESTILOS ESPECÍFICOS: HOME PAGE */
+/* ======================================= */
+
+/* BANNER PRINCIPAL (Hero Section) - HOME PAGE */
+.banner-principal {
+    background: var(--cor-anatel);
+    color: var(--cor-texto-claro);
+    padding: 120px 0;
+    text-align: center;
+}
+
+.banner-conteudo h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.banner-conteudo p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.btn-alerta {
+    display: inline-flex;
+    align-items: center;
+    background-color: #dc3545; /* Vermelho Alerta */
+    color: var(--cor-texto-claro);
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-alerta:hover {
+    background-color: #c82333;
+}
+
+.btn-alerta i {
+    margin-right: 10px;
+}
+
+/* CONTEÚDO DE INTRODUÇÃO - HOME PAGE */
+.introducao {
+    padding: 50px 0;
+    text-align: center;
+    background-color: var(--cor-texto-claro);
+}
+
+.introducao h2 {
+    color: var(--cor-anatel);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.introducao p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.introducao p strong {
+    font-weight: 600;
+}
+
+/* Título Comum de Seções */
+.titulo-secao-central {
+    text-align: center;
+    color: var(--cor-anatel);
+    font-size: 2rem;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+/* SEÇÃO DE DESTAQUES (Cards com Efeito Hover) */
+.destaques {
+    padding: 60px 0;
+    background-color: var(--cor-fundo);
+}
+
+.destaques-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+}
+
+.card-destaque {
+    background-color: var(--cor-texto-claro);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--sombra-card);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 5px solid var(--cor-secundaria);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden; /* Importante para esconder o info-extra inicialmente */
+    position: relative;
+    padding-bottom: 45px; /* Espaço para o info-extra aparecer */
+}
+
+/* EFEITO HOVER / TOOLTIP */
+.card-info-extra {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-anatel);
+    color: var(--cor-texto-claro);
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    transform: translateY(100%); /* Esconde completamente inicialmente */
+    transition: transform 0.3s ease-out;
+}
+
+.card-destaque:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-destaque:hover .card-info-extra {
+    transform: translateY(0); /* Mostra ao passar o mouse */
+}
+
+.card-destaque i {
+    font-size: 3rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 15px;
+}
+
+.card-destaque h3 {
+    color: var(--cor-anatel);
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.card-destaque p {
+    color: var(--cor-texto);
+    font-size: 0.95rem;
+}
+
+
+/* ======================================= */
+/* ESTILOS NOVOS: VÍDEO E SEÇÕES DE CONTEÚDO */
+/* ======================================= */
+
+/* SEÇÃO DE VÍDEO / DESTAQUE VISUAL */
+.video-destaque {
+    padding: 60px 0;
+    background-color: var(--cor-texto-claro);
+}
+
+.video-conteudo {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.video-box {
+    flex: 2; /* O vídeo ocupa mais espaço */
+    max-width: 60%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.video-box iframe {
+    display: block; 
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.video-texto {
+    flex: 1; 
+}
+
+.video-texto h3 {
+    color: var(--cor-anatel);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.video-texto p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.btn-cta {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-claro);
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+.btn-cta:hover {
+    background-color: #0060cb; 
+}
+.btn-cta i {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+
+/* SEÇÃO GUIA DE BOAS PRÁTICAS */
+.guia-praticas {
+    padding: 60px 0;
+    background-color: var(--cor-fundo);
+}
+
+.guia-praticas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.pratica-item {
+    background-color: var(--cor-texto-claro);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--cor-secundaria);
+    transition: all 0.3s;
+}
+
+.pratica-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.icone-pratica {
+    font-size: 2rem;
+    color: var(--cor-anatel);
+    margin-bottom: 10px;
+}
+
+.pratica-item h3 {
+    color: var(--cor-anatel);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.pratica-item p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+
+/* SEÇÃO DE ESTATÍSTICAS */
+.estatisticas {
+    padding: 60px 0;
+    background-color: var(--cor-texto-claro); 
+}
+
+.estatisticas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.estatistica-item {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--cor-fundo); 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.estatistica-item i {
+    font-size: 2.5rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 10px;
+}
+
+.estatistica-item .numero {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--cor-anatel);
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.estatistica-item .descricao {
+    font-size: 0.95rem;
+    color: var(--cor-texto);
+    margin-top: 5px;
+}
+
+
+/* SEÇÃO DE CTA SECUNDÁRIA */
+.cta-secundaria {
+    background-color: var(--cor-anatel);
+    padding: 40px 0;
+    color: var(--cor-texto-claro);
+    margin-top: 40px;
+}
+
+.cta-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.cta-secundaria i {
+    font-size: 3rem;
+    color: var(--cor-secundaria);
+}
+
+.cta-conteudo h3 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: var(--cor-texto-claro);
+}
+
+.cta-conteudo p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin: 5px 0 0 0;
+}
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 992px) {
+    /* Cards */
+    .destaques-grid {
+        grid-template-columns: 1fr; 
+    }
+    
+    /* Vídeo */
+    .video-conteudo {
+        flex-direction: column;
+    }
+    .video-box {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Estatísticas */
+    .estatisticas-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* CTA Secundária */
+    .cta-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cta-secundaria i {
+        display: none; 
+    }
+    
+    /* Guia de Práticas */
+    .guia-praticas-grid {
+        grid-template-columns: 1fr;
+    }
+}
